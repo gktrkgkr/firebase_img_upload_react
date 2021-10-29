@@ -3,6 +3,7 @@ import { render } from "react-dom";
 import { initializeApp } from "firebase/app";
 import { getStorage, ref, uploadBytes } from "firebase/storage";
 
+// credential configuration here
 const firebaseConfig = {
     
   };
@@ -14,7 +15,7 @@ const storage = getStorage(firebaseApp);
 const ReactFirebaseFileUpload = () => {
 
   const [image, setImage] = useState(null);
-
+    
   const handleChange = e => {
     if (e.target.files[0]) {
       setImage(e.target.files[0]);
